@@ -1,0 +1,25 @@
+MAIN:    MVRD R15,0x1FF
+	     MVRD R0,2
+	     MVRD R1,8
+	     MVRD R2,0x8000
+	     MVRD R3,1
+	     MVRD R4,1
+	     MVRD R5,1
+	     MVRD R6,1
+	     
+LABEL1:  PUSH R1
+	      POP R0
+	      NOT R0
+	      ROR R3,1
+	      ROR R4,2
+	      ROL R2,2
+	      ADDI R0,5
+	      SUBI R0,5
+	      ORI R0,0x0F0F
+	      ANDI R0,0x0F0F
+	      XORI R0,0x0F0F
+	      CMPI R5,1
+
+LOOP:     NOP
+	      MVRD R7,2
+	      JR LOOP

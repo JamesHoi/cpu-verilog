@@ -1,0 +1,18 @@
+MAIN:   MVRD R0,16
+	     MVRD R1,8
+	     MVRD R2,4
+	     MVRD R3,1
+	     MVRD R4,1
+	     MVRD R5,1
+	     MVRD R6,1
+	     
+CALC:    SHR R0,3
+	     SHR R1,2
+	     SHR R2,1
+	     SHL R3,1
+	     SHL R4,2
+	     SHL R5,3
+	     SHL R6,4
+
+LOOP:    NOP
+	     JR LOOP
